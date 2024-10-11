@@ -23,25 +23,25 @@ body {
 }
 
 .header {
-	display: flex; /* Use flexbox for layout */
-	justify-content: space-between; /* Space out child elements */
-	align-items: center; /* Align items vertically centered */
-	padding: 10px 20px; /* Optional: Add some padding */
-	background-color: #f1f1f1; /* Optional: Set a background color */
+	display: flex; 
+	justify-content: space-between; 
+	align-items: center; 
+	padding: 10px 20px; 
+	background-color: #f1f1f1;
 }
 
 .header h1 {
-	margin: 0; /* Remove default margin */
+	margin: 0; 
 	padding: 15px;
 }
 
 .account a {
-	text-decoration: none; /* Remove underline from the link */
-	color: #000; /* Set link color */
+	text-decoration: none;
+	color: #000; 
 }
 
 .account a:hover {
-	text-decoration: underline; /* Underline on hover */
+	text-decoration: underline; 
 }
 
 .footer {
@@ -52,7 +52,7 @@ body {
 nav ul {
 	display: flex;
 	justify-content: space-around;
-	background-color: #444; /* Dark background for the nav */
+	background-color: #444; 
 	padding: 0;
 	list-style: none;
 	margin: 0;
@@ -67,37 +67,37 @@ nav ul li a {
 }
 
 .hero {
-	position: relative; /* Allow absolute positioning of sub-hero */
-	text-align: center; /* Center text */
+	position: relative; 
+	text-align: center; 
 	padding: 20px;
-	background-color: white; /* White background for the hero */
+	background-color: white; 
 }
 
 .hero img {
-	width: 100%; /* Ensure image occupies full width */
-	max-width: 600px; /* Max width of the image */
-	height: auto; /* Maintain aspect ratio */
-	display: block; /* Make image a block element */
-	margin: 0 auto; /* Center the image horizontally */
-	border-radius: 10px; /* Rounded corners for the image */
+	width: 100%; 
+	max-width: 600px; 
+	height: auto; 
+	display: block; 
+	margin: 0 auto; 
+	border-radius: 10px; 
 }
 
 .sub-hero {
-	position: absolute; /* Position sub-hero over image */
-	top: 50%; /* Vertical positioning */
-	left: 30%; /* Adjusted to be more to the left */
-	transform: translate(-50%, -50%); /* Center horizontally and vertically */
+	position: absolute; 
+	top: 50%; 
+	left: 30%; 
+	transform: translate(-50%, -50%); 
 	background-color: rgba(
 		255,
 		255,
 		255,
 		0.8
-	); /* White transparent background for sub-hero */
-	border: 2px solid #00bfff; /* Celestial border for sub-hero */
-	border-radius: 10px; /* Rounded corners */
-	padding: 20px; /* Internal spacing */
-	width: 80%; /* Width of sub-hero */
-	max-width: 400px; /* Max width of sub-hero */
+	); 
+	border: 2px solid #00bfff; 
+	border-radius: 10px;
+	padding: 20px; 
+	width: 80%; 
+	max-width: 400px; 
 }
 .sub-hero button {
 	background-color: #00bfff;
@@ -106,105 +106,111 @@ nav ul li a {
 	color: #000;
 }
 
-/* Responsive Design for Sub-Hero */
 @media (max-width: 768px) {
 	.sub-hero {
 		margin-top: 5px;
-		width: 50%; /* Adjust width for smaller screens */
-		max-width: none; /* Remove max width for smaller screens */
-		padding: 15px; /* Reduce padding */
-		left: 30%; /* Slightly adjust left position for smaller screens */
+		width: 50%; 
+		max-width: none; 
+		padding: 15px; 
+		left: 30%; 
 	}
+  nav ul {
+    justify-content: space-between; 
+  }
+
+  nav ul li a {
+    padding: 0.5em; 
+    font-size: 0.8em; 
+  }
 }
 
 .upgrades-reviews {
-	background-color: white; /* Background color for the section */
+	background-color: white; 
 	padding: 20px;
 }
 
 .subsections {
-	display: flex; /* Use flexbox to arrange subsections */
-	justify-content: space-between; /* Space items evenly */
+	display: flex; 
+	justify-content: space-between;
 }
 
 .upgrades,
 .reviews {
-	width: 48%; /* Adjust width to fit both subsections */
-	display: flex; /* Enable flexbox for the subsections */
-	flex-direction: column; /* Arrange items in a column */
+	width: 48%; 
+	display: flex; 
+	flex-direction: column; 
 }
 
 .upgrades {
-	padding: 20px; /* Padding inside the section */
+	padding: 20px; 
 }
 
 .upgrade-items {
-	display: flex; /* Use flexbox for layout */
-	flex-direction: column; /* Arrange items in a column */
-	gap: 10px; /* Reduced gap between the rows */
+	display: flex; 
+	flex-direction: column; 
+	gap: 10px; 
 }
 
 .upgrade-row {
-	display: flex; /* Use flexbox for each row */
-	gap: 10px; /* Add gap between items in the same row */
+	display: flex; 
+	gap: 10px; 
 }
 
 .upgrade-item {
-	width: 50%; /* Set width to fit two items per row */
-	text-align: center; /* Center text under images */
+	width: 50%; 
+	text-align: center; 
 }
 
 .image-container {
-	background-color: #87cefa; /* Light blue background for each image */
-	padding: 10px; /* Add some padding around the image */
-	border-radius: 10px; /* Rounded corners for the item */
+	background-color: #87cefa;
+	padding: 10px; 
+	border-radius: 10px; 
 }
 
 .upgrade-item img {
-	max-width: 100%; /* Ensure the image is responsive */
-	height: auto; /* Maintain aspect ratio */
+	max-width: 100%;
+	height: auto; 
 }
 
 .upgrade-item a {
-	display: block; /* Make the link a block element */
-	margin-top: 10px; /* Add some margin above the link */
-	font-weight: bold; /* Make the link bold */
+	display: block; 
+	margin-top: 10px; 
+	font-weight: bold; 
 }
 
 .upgrade-item a:hover {
-	text-decoration: underline; /* Underline on hover */
+	text-decoration: underline; 
 }
 
 .reviews {
-	padding: 20px; /* Padding inside the reviews section */
+	padding: 20px; 
 }
 
 .reviews ul {
-	padding: 0; /* Remove default padding */
+	padding: 0;
 }
 
 .reviews li {
-	margin-bottom: 10px; /* Space between review items */
+	margin-bottom: 10px;
 }
 
-/* Align the titles in the upgrades and reviews sections */
+
 h4 {
-	margin: 10px; /* Remove default margin */
+	margin: 10px; 
 	font-size: larger;
-	display: flex; /* Use flexbox for alignment */
-	align-items: flex-start; /* Align titles at the start */
+	display: flex;
+	align-items: flex-start;
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
 		'Lucida Sans', Arial, sans-serif;
 }
 
-/* Responsive Design for Upgrades and Reviews */
 @media (max-width: 768px) {
 	.subsections {
-		flex-direction: column; /* Stack items vertically */
+		flex-direction: column; 
 	}
 
 	.upgrades,
 	.reviews {
-		width: 100%; /* Full width for each section on mobile */
+		width: 90%; 
 	}
 }
