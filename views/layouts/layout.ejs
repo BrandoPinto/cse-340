@@ -1,28 +1,20 @@
-<!-- layout.ejs -->
 <!DOCTYPE html>
 <html lang="en">
+<head>
   <%- include('../partials/head') %>
+</head>
+<body>
+  <header>
+    <%- include('../partials/header') %>
+    <%- include('../partials/navigation') %>
+  </header>
 
-  <body>
-    <div id="wrapper">
-      <%- include('../partials/header') %>
-      <%- include('../partials/navigation') %>
+  <main class="main-container">
+    <%- body %>
+  </main>  
 
-      <main>
-        <%- body %>
-      </main>
-
-      <%- include('../partials/footer') %>
-    </div>
-  </body>
-
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const menu = document.getElementById('menu');
-  
-    hamburger.addEventListener('click', () => {
-      menu.classList.toggle('active'); // Toggle the active class to show/hide menu
-    });
-  </script>
-  
+  <footer>
+    <%- include('../partials/footer') %>
+  </footer>
+</body>
 </html>

@@ -1,181 +1,195 @@
-/* General body styles */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: url('/images/vehicles/hero-image.jpg') no-repeat center center fixed;
+  background-image: url('/images/site/checkerboard.jpg'); /* Background image */
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white; /* White background for the body */
+  width: 80%; /* Body will occupy 80% of the width */
+  margin: 20px auto; /* Center the body */
+  border: 5px solid #00bfff; /* Light blue border around the body */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow around the body */
 }
 
-/* Make all images responsive */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Wrapper for content */
-#wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9); /* Adds some transparency */
-}
-
-/* Header styles */
-#top-header {
-  background-color: #333;
-  padding: 10px 20px;
-  color: white;
+.header, .footer {
+  background-color: white; /* White background for header and footer */
+  color: black;
   text-align: center;
+  padding: 2em;
 }
 
-.siteName a {
-  color: #a70d0d;
-  text-decoration: none;
-  font-size: 2rem;
+.header {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out child elements */
+  align-items: center; /* Align items vertically centered */
+  padding: 10px 20px; /* Optional: Add some padding */
+  background-color: #f1f1f1; /* Optional: Set a background color */
+}
+
+.header h1 {
+  margin: 0; /* Remove default margin */
+  padding: 15px;
+}
+
+.account a {
+  text-decoration: none; /* Remove underline from the link */
+  color: #000; /* Set link color */
+}
+
+.account a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.footer {
+  text-align: start;
   font-weight: bold;
 }
 
-#tools a {
-  color: #a70;
-  text-decoration: none;
-  margin-left: 20px;
-}
-
-/* Navigation menu styles */
-nav {
-  background-color: #444;
-  padding: 10px;
-  position: relative; /* Required for absolute positioning of menu */
-}
-
-.menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+nav ul {
   display: flex;
   justify-content: space-around;
-}
-
-.menu li {
+  background-color: #444; /* Dark background for the nav */
+  padding: 0;
+  list-style: none;
   margin: 0;
 }
 
-.menu a {
+nav ul li a {
+  color: white;
   text-decoration: none;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  padding: 1em;
+  display: block;
 }
 
-.menu a:hover {
-  background-color: #666;
-}
-
-/* Hamburger menu styles */
-.hamburger {
-  cursor: pointer; /* Change cursor to pointer */
-  color: white; /* Hamburger icon color */
-  font-size: 24px; /* Size of the hamburger icon */
-  display: none; /* Initially hidden on larger screens */
-}
-
-/* Main content styles */
-main {
-  margin: 20px 0;
-}
-
-main section {
-  margin-bottom: 40px;
-}
-
-main h1, main h2 {
-  color: #333;
-}
-
-#hero {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-#hero .hero-content h1 {
-  font-size: 3rem;
-}
-
-#about, #services, #contact {
-  background-color: #f4f4f4;
-  padding: 40px 20px;
-  border-radius: 10px;
-}
-
-/* Buttons */
-.btn-primary {
-  background-color: #0066cc;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.btn-primary:hover {
-  background-color: #004c99;
-}
-
-/* Footer styles */
-footer {
-  background-color: #333;
-  color: white;
+.hero {
+  position: relative; /* Allow absolute positioning of sub-hero */
+  text-align: center; /* Center text */
   padding: 20px;
-  text-align: center;
+  background-color: white; /* White background for the hero */
 }
 
-footer .copyright {
-  margin: 0;
+.hero img {
+  width: 100%; /* Ensure image occupies full width */
+  max-width: 600px; /* Max width of the image */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Make image a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  border-radius: 10px; /* Rounded corners for the image */
 }
 
-/* Media Queries for responsive design */
+.sub-hero {
+  position: absolute; /* Position sub-hero over image */
+  top: 50%; /* Vertical positioning */
+  left: 30%; /* Adjusted to be more to the left */
+  transform: translate(-50%, -50%); /* Center horizontally and vertically */
+  background-color: rgba(255, 255, 255, 0.8); /* White transparent background for sub-hero */
+  border: 2px solid #00bfff; /* Celestial border for sub-hero */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Internal spacing */
+  width: 80%; /* Width of sub-hero */
+  max-width: 400px; /* Max width of sub-hero */
+}
+
+/* Responsive Design for Sub-Hero */
 @media (max-width: 768px) {
-  .menu {
-    display: none; /* Hide menu items initially on small screens */
-    flex-direction: column; /* Stack menu items vertically */
-    background-color: #444; /* Match the navigation background */
-    position: absolute; /* Position the menu */
-    top: 60px; /* Adjust according to the header height */
-    width: 100%; /* Full width for the dropdown */
-    z-index: 1; /* Ensure it appears above other content */
-  }
-
-  .hamburger {
-    display: block; /* Show hamburger on small screens */
-  }
-
-  .menu.active {
-    display: flex; /* Show menu items when hamburger is clicked */
+  .sub-hero {
+    margin-top: 5px;
+    width: 50%; /* Adjust width for smaller screens */
+    max-width: none; /* Remove max width for smaller screens */
+    padding: 15px; /* Reduce padding */
+    left: 30%; /* Slightly adjust left position for smaller screens */
   }
 }
 
-@media (max-width: 480px) {
-  #top-header {
-    padding: 5px; /* Smaller padding for header */
+.upgrades-reviews {
+  background-color: white; /* Background color for the section */
+  padding: 20px;
+}
+
+.subsections {
+  display: flex; /* Use flexbox to arrange subsections */
+  justify-content: space-between; /* Space items evenly */
+}
+
+.upgrades,
+.reviews {
+  width: 48%; /* Adjust width to fit both subsections */
+  display: flex; /* Enable flexbox for the subsections */
+  flex-direction: column; /* Arrange items in a column */
+}
+
+.upgrades {
+  padding: 20px; /* Padding inside the section */
+}
+
+.upgrade-items {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange items in a column */
+  gap: 10px; /* Reduced gap between the rows */
+}
+
+.upgrade-row {
+  display: flex; /* Use flexbox for each row */
+  gap: 10px; /* Add gap between items in the same row */
+}
+
+.upgrade-item {
+  width: 50%; /* Set width to fit two items per row */
+  text-align: center; /* Center text under images */
+}
+
+.image-container {
+  background-color: #87CEFA; /* Light blue background for each image */
+  padding: 10px; /* Add some padding around the image */
+  border-radius: 10px; /* Rounded corners for the item */
+}
+
+.upgrade-item img {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.upgrade-item a {
+  display: block; /* Make the link a block element */
+  margin-top: 10px; /* Add some margin above the link */
+  font-weight: bold; /* Make the link bold */
+}
+
+.upgrade-item a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.reviews {
+  padding: 20px; /* Padding inside the reviews section */
+}
+
+.reviews ul {
+  padding: 0; /* Remove default padding */
+}
+
+.reviews li {
+  margin-bottom: 10px; /* Space between review items */
+}
+
+/* Align the titles in the upgrades and reviews sections */
+h4 {
+  margin: 10px; /* Remove default margin */
+  font-size: larger;
+  display: flex; /* Use flexbox for alignment */
+  align-items: flex-start; /* Align titles at the start */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Responsive Design for Upgrades and Reviews */
+@media (max-width: 768px) {
+  .subsections {
+    flex-direction: column; /* Stack items vertically */
   }
 
-  .siteName a {
-    font-size: 1.5rem; /* Smaller font size for site name */
-  }
-
-  #hero .hero-content h1 {
-    font-size: 1.5rem; /* Even smaller font for mobile */
-  }
-
-  #about, #services, #contact {
-    padding: 20px 10px; /* Smaller padding for sections */
-  }
-
-  .btn-primary {
-    padding: 8px 16px; /* Smaller button size */
+  .upgrades,
+  .reviews {
+    width: 100%; /* Full width for each section on mobile */
   }
 }
