@@ -7,10 +7,13 @@
         }
       },
       "previewLimit": 50,
-      "server": "localhost",
+      "server": "dpg-cs6vc023esus73ceb8i0-a.oregon-postgres.render.com",
       "driver": "PostgreSQL",
       "name": "render.com",
-      "connectString": "postgresql://demo456:6OUDBcy5UBn3NPRpf8fRCWHgTxTEbeu8@dpg-crtmbqd2ng1s73c7qijg-a.oregon-postgres.render.com/demo456_h1p0"
+      "database": "demo313",
+      "username": "demo313",
+      "password": "GFSztyXGNhKWdWOrdKHtZh0qwNv2Qh0E",
+      "connectString": "postgresql://demo313:GFSztyXGNhKWdWOrdKHtZh0qwNv2Qh0E@dpg-cs6vc023esus73ceb8i0-a.oregon-postgres.render.com/demo313"
     }
   ]
 }
