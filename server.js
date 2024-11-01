@@ -31,9 +31,14 @@ app.use(
       pool,
     }),
     secret: process.env.SESSION_SECRET,
-    resave: true,
-    saveUninitialized: true,
+    resave: false,
+    saveUninitialized: false,
     name: "sessionId",
+    cookie: {
+      secure: process.env.NODE_ENV === 'production', 
+      maxAge: 24 * 60 * 60 * 1000, 
+      httpOnly: true,
+    },
   })
 );
 
